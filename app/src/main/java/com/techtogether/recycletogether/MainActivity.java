@@ -87,7 +87,7 @@ public class MainActivity<RadarCallback> extends AppCompatActivity implements On
 
     private TextView location_1, location_2, location_3;
     private Address addr_1, addr_2, addr_3;
-    private double lat, lon, lat1, lon1
+    private double lat, lon, lat1, lon1;
 
     protected void onCreate(Bundle savedInstanceState) {
 
