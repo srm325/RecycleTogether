@@ -14,7 +14,14 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Button btn = (Button)findViewById(R.id.FindRecyclingCenter);
+        Button btn1 = (Button)findViewById(R.id.ScanProduct);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, ScanBarcode.class));
+            }
 
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

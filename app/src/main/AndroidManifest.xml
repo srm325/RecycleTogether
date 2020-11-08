@@ -3,6 +3,7 @@
     package="com.techtogether.recycletogether">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
@@ -17,7 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleTogether"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <activity android:name=".ScanBarcode"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
